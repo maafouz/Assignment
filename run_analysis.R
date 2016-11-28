@@ -1,13 +1,18 @@
 ##Download the file and put the file in the data folder
-if(!file.exists("./data")){dir.create("./data")}
-fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
+#if(!file.exists("./data")){dir.create("./data")}
+#fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+#download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
 
 ##Unzip the file
-unzip(zipfile="./data/Dataset.zip",exdir="./data")
+#unzip(zipfile="./data/Dataset.zip",exdir="./data")
 
-#unzipped files are in the folderUCI HAR Dataset. Get the list of the files
-path_rf <- file.path("./data" , "UCI HAR Dataset")
+##unzipped files are in the folderUCI HAR Dataset. Get the list of the files
+#path_rf <- file.path("./data" , "UCI HAR Dataset")
+
+
+
+########UCI HAR Dataset should be in working directory###############
+path_rf <- file.path("UCI HAR Dataset")
 files<-list.files(path_rf, recursive=TRUE)
 files
 
